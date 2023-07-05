@@ -3,7 +3,7 @@ import cv2
 
 image = cv2.imread('zoomcokie.png')
 
-reader = easyocr.Reader(['pt', 'pt'], gpu=True)
+reader = easyocr.Reader(['pt', 'pt'], gpu=False)
 result = reader.readtext(image)
 
 new_image = image
@@ -22,5 +22,5 @@ for word in result:
 
     new_image = cv2.rectangle(new_image, start_point, end_point, color, thickness)
 
-cv2.imshow('Palavras encontradas', new_image)
+cv2.imshow('Resultado', new_image)
 cv2.waitKey(0)
