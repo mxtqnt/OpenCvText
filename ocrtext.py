@@ -1,7 +1,7 @@
 import easyocr
 import cv2
 
-image = cv2.imread('Cookie.png')
+image = cv2.imread('tresh.png')
 
 reader = easyocr.Reader(['pt', 'pt'], gpu=False)
 result = reader.readtext(image, paragraph="False", detail='False')
