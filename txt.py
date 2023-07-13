@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-img = cv.imread('grande.png', cv.IMREAD_GRAYSCALE)
+img = cv.imread('fatiada.png', cv.IMREAD_GRAYSCALE)
 assert img is not None, "file could not be read, check with os.path.exists()"
 # global thresholding
 ret1,th1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
