@@ -3,19 +3,19 @@ import aspose.pdf as ap
 alturapag = 641
 largurapag = 1072
 
-iniciox = 177
-inicioy = 485
-finalx = 407
-finaly = 700
+iniciox = 296
+inicioy = 234
+finalx = 374
+finaly = 258
 
 #Rectangle(left, bottom, width, height)
 left = iniciox
-bottom = alturapag - finaly
-width = finalx - iniciox
-height = (alturapag - inicioy) - bottom
+bottom = (alturapag - finaly) - 30
+width = (finalx - iniciox) - 60
+height = ((alturapag - inicioy) - (alturapag - finaly)) + 30
 
 # Carregar arquivo PDF
-document = ap.Document("balinhacom.pdf")
+document = ap.Document("balinhacompleta.pdf")
 
 # Criar um novo retângulo
 newBox = ap.Rectangle(left, bottom, width, height, True)
