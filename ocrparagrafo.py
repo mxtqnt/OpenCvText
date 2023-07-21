@@ -6,7 +6,7 @@ open('result.txt', 'w').close()
 graus=0
 
 # Load image, grayscale, Gaussian blur, Otsu's threshold
-image = cv2.imread('balinhacompleta.png')
+image = cv2.imread('paragrafo.png')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray, (7,7), 0)
 thresh = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
@@ -34,7 +34,6 @@ for c in cnts:
     #     print('Nenhuma palavra encontrada')
     #     exit(1)
     for res in result:
-        graus=0
         top_left = (int(res[0][0][0]), int(res[0][0][1])) # convert float to int
         bottom_right = (int(res[0][2][0]), int(res[0][2][1])) # convert float to int
         #cv2.putText(cropped_image, res[1], (top_left[0], top_left[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (255, 0, 255), 1)

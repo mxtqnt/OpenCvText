@@ -16,10 +16,10 @@ cvw = 1072
 cvh = 641
 
 # Cordenadas OpenCV
-cvx1 = 267
-cvy1 = 567
-cvx2 = 458
-cvy2 = 635
+cvx1 = 0
+cvy1 = 311
+cvx2 = 229
+cvy2 = 526
 
 # Cordenadas PDF
 pdfx1 = ((pdfw*cvx1)/cvw)
