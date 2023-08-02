@@ -38,7 +38,8 @@ def encontrar_contornos():
         # Mostrar recorte a ser lido
         wh = redimencionar('recorte.png', 80)
         resize = cv2.resize(recorte, wh) 
+
+        c = ler_texto(recorte, c)
+        
         cv2.imshow('Area de leitura', resize)
         cv2.waitKey()
-
-        ler_texto(recorte, c)

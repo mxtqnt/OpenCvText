@@ -40,6 +40,8 @@ def recortar_parafo(x, y, w, h):
     # Definir área de corte
     page.cropbox = RectangleObject((pdfx1, (pdfh - pdfy1), pdfx2, (pdfh - pdfy2)))
 
+    page.scale_by(2.5)
+
     # Armazenar novo PDF
     writer.add_page(reader.pages[0])
     with open("recorte.pdf", "wb") as fp:
